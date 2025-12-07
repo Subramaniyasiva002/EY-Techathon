@@ -1,0 +1,299 @@
+{
+    "VH001": [
+        {
+            "timestamp": "2025-12-06T17:50:30.833325",
+            "slot": "10:00 AM",
+            "booking_id": 92617,
+            "likely_failure": "cooling_failure",
+            "risk_score": 0.897,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T06:01:50.436670",
+            "slot": "10:00 AM",
+            "booking_id": 91739,
+            "likely_failure": "cooling_failure",
+            "risk_score": 0.92,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T06:07:43.076289",
+            "slot": "10:00 AM",
+            "booking_id": 17015,
+            "likely_failure": "battery_failure",
+            "risk_score": 0.987,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "goodi"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T06:33:38.206484",
+            "slot": "10:00 AM",
+            "booking_id": 11851,
+            "likely_failure": "battery_failure",
+            "risk_score": 0.997,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "ok"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T06:34:26.419902",
+            "slot": "10:00 AM",
+            "booking_id": 61704,
+            "likely_failure": "cooling_failure",
+            "risk_score": 0.9,
+            "priority": "HIGH"
+        },
+        {
+            "timestamp": "2025-12-07T06:57:05.892449",
+            "slot": "10:00 AM",
+            "booking_id": 89053,
+            "likely_failure": "cooling_failure",
+            "risk_score": 0.883,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "goodi"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:02:00.860641",
+            "slot": "10:00 AM",
+            "booking_id": 43145,
+            "likely_failure": "battery_failure",
+            "risk_score": 0.99,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 1,
+                "comments": "bad"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:06:37.209061",
+            "slot": "10:00 AM",
+            "booking_id": 48555,
+            "likely_failure": "cooling_failure",
+            "risk_score": 0.91,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "excellent"
+            }
+        }
+    ],
+    "VH002": [],
+    "VH003": [],
+    "VH004": [],
+    "VH005": [
+        {
+            "timestamp": "2025-12-07T06:57:33.090065",
+            "slot": "10:00 AM",
+            "booking_id": 84702,
+            "likely_failure": "vibration_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "i"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T06:58:32.713999",
+            "slot": "10:00 AM",
+            "booking_id": 17503,
+            "likely_failure": "vibration_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "h"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T08:51:02.049097",
+            "slot": "10:00 AM",
+            "booking_id": 68045,
+            "likely_failure": "vibration_failure",
+            "risk_score": 0.997,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "ok"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:01:06.275008",
+            "slot": "10:00 AM",
+            "booking_id": 44562,
+            "likely_failure": "engine_stress",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 3,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:04:49.566451",
+            "slot": "10:00 AM",
+            "booking_id": 32975,
+            "likely_failure": "vibration_failure",
+            "risk_score": 0.997,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:07:17.629319",
+            "slot": "10:00 AM",
+            "booking_id": 84255,
+            "likely_failure": "battery_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:08:05.766379",
+            "slot": "10:00 AM",
+            "booking_id": 74793,
+            "likely_failure": "battery_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 3,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T13:19:26.705862",
+            "slot": "10:00 AM",
+            "booking_id": 46309,
+            "likely_failure": "vibration_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "5",
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T13:26:35.145671",
+            "slot": "10:00 AM",
+            "booking_id": 34465,
+            "likely_failure": "vibration_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "4",
+                "comments": "good"
+            }
+        }
+    ],
+    "VH006": [],
+    "VH007": [],
+    "VH008": [
+        {
+            "timestamp": "2025-12-07T08:58:03.789327",
+            "slot": "10:00 AM",
+            "booking_id": 12088,
+            "likely_failure": "vibration_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "l"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:01:24.149495",
+            "slot": "10:00 AM",
+            "booking_id": 18178,
+            "likely_failure": "engine_stress",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "nice"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:04:08.201374",
+            "slot": "10:00 AM",
+            "booking_id": 42870,
+            "likely_failure": "engine_stress",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 3,
+                "comments": "not bad"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:05:25.854134",
+            "slot": "10:00 AM",
+            "booking_id": 22278,
+            "likely_failure": "engine_stress",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:06:08.903735",
+            "slot": "10:00 AM",
+            "booking_id": 24135,
+            "likely_failure": "battery_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "very good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:07:36.728140",
+            "slot": "10:00 AM",
+            "booking_id": 23703,
+            "likely_failure": "vibration_failure",
+            "risk_score": 0.997,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 2,
+                "comments": "bad"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T09:08:19.919526",
+            "slot": "10:00 AM",
+            "booking_id": 97661,
+            "likely_failure": "vibration_failure",
+            "risk_score": 0.997,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "good"
+            }
+        }
+    ],
+    "VH009": [],
+    "VH010": []
+}

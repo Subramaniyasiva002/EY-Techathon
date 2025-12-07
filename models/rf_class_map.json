@@ -1,0 +1,7 @@
+{
+    "0": "normal",
+    "1": "cooling_failure",
+    "2": "battery_failure",
+    "3": "vibration_failure",
+    "4": "engine_stress"
+}

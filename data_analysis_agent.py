@@ -6,7 +6,7 @@ import requests
 import time
 from collections import deque
 import numpy as np
-
+from ueba_agent import UEBAAgent
 POLL_INTERVAL = 10          # seconds
 WINDOW_SIZE = 10            # number of readings in rolling context window
 TELEMATICS_URL = "http://localhost:8000/telematics/{}"
@@ -14,6 +14,7 @@ TELEMATICS_URL = "http://localhost:8000/telematics/{}"
 
 class DataAnalysisAgent:
     def __init__(self, maintenance_history=None):
+        self.ueba = UEBAAgent()
         self.windows = {}   # {vehicle_id: deque}
         # Optional: static or periodically refreshed maintenance history per vehicle
         # Example structure:
@@ -65,8 +66,9 @@ class DataAnalysisAgent:
 
         # Build feature dict
         features = {
+            "timestamp": window[-1]["timestamp"],
             "vehicle_id": vehicle_id,
-
+            
             # latest values
             "engine_temp": float(engine_temp[-1]),
             "battery_voltage": float(battery_voltage[-1]),
@@ -116,6 +118,10 @@ class DataAnalysisAgent:
             print(window_context)
 
             features = self.compute_features(vehicle_id)
+            # UEBA log
+            if hasattr(self, "ueba"):
+                self.ueba.log_event("DataAnalysisAgent", "send_window")
+
             diagnosis_callback(features)
 
     def start(self, vehicle_list, diagnosis_callback):

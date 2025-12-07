@@ -1,53 +1,47 @@
 # diagnosis_agent.py
-import joblib
-import json
+import joblib, json
 import numpy as np
-import os
+from ueba_agent import UEBAAgent
 
 class DiagnosisAgent:
-    def __init__(self, model_path="models/rf_model.joblib", feature_path="models/rf_features.json"):
-        if not os.path.exists(model_path):
-            raise FileNotFoundError("RandomForest model not found! Train model before running.")
-
-        if not os.path.exists(feature_path):
-            raise FileNotFoundError("rf_features.json not found!")
-
-        # Load model + feature order
-        self.model = joblib.load(model_path)
-        with open(feature_path, "r") as f:
+    def __init__(self):
+        self.ueba = UEBAAgent()
+        self.model = joblib.load("models/rf_multiclass_model_updated.joblib")
+        with open("models/rf_features.json") as f:
             self.feature_order = json.load(f)
+        with open("models/rf_class_map.json") as f:
+            self.class_map = json.load(f)
 
-        print("[DiagnosisAgent] RF model loaded.")
-        print("[DiagnosisAgent] Feature order loaded:", self.feature_order)
+    def predict(self, features):
+        # create input vector
+        X = [[float(features.get(col, 0.0)) for col in self.feature_order]]
+        X = np.array(X)
 
-    def predict(self, features: dict):
-        """Convert feature dict into model input and return risk score."""
-        X = []
+        # predict class
+        cls = int(self.model.predict(X)[0])
+        comp_name = self.class_map[str(cls)]
 
-        # Prepare model input in exact feature order
-        for col in self.feature_order:
-            X.append(float(features.get(col, 0.0)))
+        # probability of failure = sum of non-normal classes
+        probs = self.model.predict_proba(X)[0]
+        failure_prob = 1 - probs[0]  # class 0 = normal
 
-        X = np.array(X).reshape(1, -1)
-
-        # Predict probability of failure
-        prob = float(self.model.predict_proba(X)[0][1])
-
-        # Priority & component inference
-        if prob > 0.8:
+        # priority
+        if failure_prob > 0.8:
             priority = "HIGH"
-            comp = "Cooling/Battery"
-        elif prob > 0.5:
+        elif failure_prob > 0.5:
             priority = "MEDIUM"
-            comp = "Wear / Stress"
         else:
             priority = "LOW"
-            comp = "Normal"
+        
+        # UEBA log
+        if hasattr(self, "ueba"):
+            self.ueba.log_event("DiagnosisAgent", "send_to_master")
 
         return {
             "vehicle_id": features["vehicle_id"],
-            "risk_score": round(prob, 3),
+            "risk_score": round(float(failure_prob), 3),
+            "predicted_class": cls,
+            "likely_failure": comp_name,
             "priority": priority,
-            "likely_failure": comp,
-            "eta_km": 200 if prob > 0.5 else None
+            "eta_km": 150 if priority == "HIGH" else (300 if priority == "MEDIUM" else None)
         }

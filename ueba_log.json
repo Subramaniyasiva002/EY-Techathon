@@ -1,0 +1,2702 @@
+[
+    {
+        "timestamp": 1765026391.1507666,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765026391.2345543,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765026391.27608,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765026391.3075743,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765026391.331165,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765026391.3531327,
+        "agent": "SchedulingAgent",
+        "action": "hack_database"
+    },
+    {
+        "timestamp": 1765026391.3763828,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765026391.3984487,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765026393.4796805,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765026393.5846362,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765026393.6193912,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765026393.6529438,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765026393.676254,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765026393.6943166,
+        "agent": "SchedulingAgent",
+        "action": "hack_database"
+    },
+    {
+        "timestamp": 1765026393.7184758,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765026393.738121,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765026405.798607,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765026405.888892,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765026405.924358,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765026405.9574835,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765026405.9802897,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765026408.043697,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765026408.1400192,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765026408.1782763,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765026408.2095115,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765026408.2344835,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765026408.259473,
+        "agent": "SchedulingAgent",
+        "action": "hack_database"
+    },
+    {
+        "timestamp": 1765026408.2856038,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765026408.3049905,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765040836.4715502,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765040836.5533464,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765040836.596675,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765040836.6310492,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765040836.6661987,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041517.6930947,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041517.7631567,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041517.8064346,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041517.8425949,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765041517.8611279,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041517.8829622,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765041517.9155955,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041517.9405992,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041540.1544785,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041542.2124052,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041542.2998698,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041542.3397388,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041542.3772535,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765041542.401764,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041542.4237552,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765041542.4597864,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041542.4815795,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041544.7917328,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041558.9131885,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041558.977843,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041559.0217066,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041559.0584521,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041559.0837595,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041561.1358907,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041561.2204964,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041561.2528374,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041561.2986467,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765041561.3231583,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041561.351266,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765041561.3811193,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041561.4080288,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041570.1505456,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041584.219696,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041584.3129022,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041584.3587306,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041584.3916073,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041584.4173963,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041586.4728642,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041586.558362,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041586.6042385,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041586.642746,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765041586.6660442,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041586.6893046,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765041586.721925,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041586.7416494,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041592.917626,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041607.022954,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041607.1108646,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041607.1491904,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041607.1907227,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041607.216737,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765041609.2931137,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765041609.3801396,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765041609.421873,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765041609.4634523,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765041609.487061,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765041609.5134325,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765041609.5468452,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765041609.5746863,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765043408.1529543,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765043408.2200887,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765043408.2619202,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765043408.2986062,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765043408.3290486,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765043408.3549032,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765043408.3816128,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765043408.405017,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765043428.7771602,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765043443.7694354,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765043444.0101159,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765043444.0392087,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765043444.0856452,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765043444.1083407,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765043444.1283684,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765043444.153293,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765043444.1766095,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087275.987682,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087276.0462685,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087276.0624168,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087276.079515,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087276.0965695,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087276.1122303,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087276.1297708,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087276.1434832,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087308.374004,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087644.3985257,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087644.4261215,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087644.462345,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087644.4896407,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087644.5076516,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087644.5394537,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087644.5540102,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087644.5659363,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087661.0178711,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087673.2373614,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087673.2709064,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087673.2868292,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087673.3041053,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087673.319327,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087673.3349726,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087673.3514204,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087673.3668177,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087683.908145,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087695.944387,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087695.977055,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087695.9952333,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087696.0133526,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087696.0289352,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087698.1009746,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087698.137436,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087698.172956,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087698.1988764,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087698.2258532,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087698.2457325,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087698.2715485,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087698.283992,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087702.8267245,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087716.9441803,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087716.977307,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087716.9947422,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087717.013393,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087717.0298696,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087719.1147757,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087719.147581,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087719.1630874,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087719.1812131,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087719.1974413,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087719.2150016,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087719.2313898,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087719.248797,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087727.5549493,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087741.6491835,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087741.6840944,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087741.7012954,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087741.7200792,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087741.7369301,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087743.803505,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087743.8372874,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087743.8522432,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087743.8730223,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087743.8909128,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087743.9081037,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087743.9266062,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087743.9440484,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087746.5525746,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087760.6333687,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087760.6690972,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087760.6844783,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087760.699025,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087760.7149134,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087762.7938104,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087762.827131,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087762.8445673,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087762.8607225,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087762.876061,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087762.8942547,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087762.9136016,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087762.9303188,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087768.962542,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087783.0607483,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087783.0936296,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087783.1104348,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087783.1258085,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087783.141086,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087785.2104964,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087785.2362754,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087785.2537317,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087785.2696738,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087785.2876308,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087785.3054605,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087785.324452,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087785.340489,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087788.05811,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087802.135742,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087802.1702256,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087802.187301,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087802.202499,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087802.2207043,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087804.2976034,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087804.331776,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087804.34839,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087804.3685286,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087804.384233,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087804.4025302,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087804.4204686,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087804.436586,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087810.4460237,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087824.5514693,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087824.5892487,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087824.6095698,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087824.6288345,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087824.6490793,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765087826.721083,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765087826.7588131,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765087826.7881742,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765087826.8140745,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765087826.8426776,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765087826.8781803,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765087826.8977525,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765087826.910869,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765089202.7256174,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765089202.7520792,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765089202.7700875,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765089202.7851546,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765089202.802338,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765089202.8190885,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765089202.8377748,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765089202.855643,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765089214.1212573,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765089225.981952,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765089226.0170097,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765089226.049517,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765089226.0791874,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765089226.1065562,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765089226.1409018,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765089226.1584277,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765089226.1732216,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765089236.345859,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765089250.4680977,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765089250.5075018,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765089250.5277836,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765089250.5451918,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765089250.562691,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765089250.5808988,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765089250.5997748,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765089250.6164882,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765089262.3219583,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090611.5918236,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765090611.653781,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765090611.7016013,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765090611.738229,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765090611.7686348,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090611.7966654,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765090611.827868,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765090611.8524718,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765090621.799845,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090636.34959,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765090636.4094343,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765090636.4536514,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765090636.497959,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765090636.525492,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090636.5587606,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765090636.589279,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765090636.617043,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765090648.9963892,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090673.0289059,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765090673.1278834,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765090673.1662507,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765090673.200029,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765090673.2310762,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765090675.324739,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765090675.4345353,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765090675.466691,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765090675.5025868,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765090675.528587,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090675.5587773,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765090675.5883842,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765090675.609578,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765090708.602875,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090731.1751206,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765090731.2752585,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765090731.315073,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765090731.3506527,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765090731.3792002,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765090733.4299555,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765090733.5154035,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765090733.5460718,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765090733.575253,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765090733.599978,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765090733.624581,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765090733.6498725,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765090733.6751087,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765097417.401199,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765097417.4724834,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765097417.5208204,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765097417.562351,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765097417.5972204,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765097419.6980784,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765097419.8215446,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765097419.9476252,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765097419.9863334,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765097420.024175,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765097420.0561628,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765097420.0842953,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765097420.1118116,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765097457.9128087,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765097469.8019257,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765097469.8761275,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765097469.9264708,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765097469.9698253,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765097469.9949546,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765097470.0299778,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765097470.0606263,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765097470.0895662,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765097879.686595,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098044.6934144,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098044.7711186,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098044.8151708,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098044.8536046,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098044.884321,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098046.9741325,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098047.076781,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098047.1218615,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098047.1542256,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098047.1826227,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098047.2211688,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098047.2495008,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098047.2766786,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098062.1343517,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098075.6573722,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098075.7602727,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098075.800952,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098075.835685,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098075.86488,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098075.896965,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098075.9273267,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098075.953819,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098080.0372932,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098107.4414828,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098107.5366673,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098107.57997,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098107.618043,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098107.6447148,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098107.6780593,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098107.7106555,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098107.7387998,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098116.7795112,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098141.5644302,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098141.658925,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098141.702941,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098141.7364311,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098141.7673469,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098141.7998502,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098141.830086,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098141.8632905,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098238.3131533,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098240.3862004,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098240.475888,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098240.5140457,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098240.5560892,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098240.5849366,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098240.623029,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098240.6521883,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098240.678575,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098244.0987773,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098268.5654538,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098268.6692839,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098268.711116,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098268.7563202,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098268.790679,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098270.8927922,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098270.9918664,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098271.0335453,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098271.0699904,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098271.096323,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098271.1323166,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098271.1655307,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098271.1945038,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098285.4447348,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098302.9068058,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098303.0124738,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098303.1263227,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098303.1851122,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098303.2295504,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098303.2641366,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098303.297213,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098303.324645,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098321.7183456,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098343.84943,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098343.9563637,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098344.0012782,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098344.0327814,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098344.06372,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098346.1364155,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098346.2480097,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098346.2930462,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098346.3253138,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098346.357008,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098346.4011803,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098346.4259632,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098346.4554462,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098349.6145318,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098351.7057726,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098351.8182814,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098351.860361,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098351.89759,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098351.9291763,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098351.9630997,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098351.9946427,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098352.0249786,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098364.7849932,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098388.145554,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098388.2453382,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098388.2893567,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098388.330302,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098388.3628888,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098388.4004896,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098388.429796,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098388.4574943,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098393.0879831,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098410.386375,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098410.479438,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098410.5237093,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098410.5637498,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098410.5917854,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098410.6287405,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098410.656595,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098410.6843,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098433.5402782,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098444.5510314,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098444.6538205,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098444.697867,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098444.7340097,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098444.7665718,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098444.8055017,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098444.836136,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098444.8624046,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098452.6077683,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098476.3597236,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098476.4837902,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098476.525093,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098476.5581043,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098476.5971007,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098478.7094755,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098478.8116555,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098478.859921,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098478.8992183,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098478.929319,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098478.9683864,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098478.997349,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098479.0274346,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098481.6813614,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098492.7861855,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098492.87848,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098492.9274025,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098492.9632046,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098492.9948282,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098493.0342853,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098493.0687463,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098493.0940747,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098495.8010433,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098518.5697405,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098518.687533,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098518.7363002,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098518.7731287,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098518.808728,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765098520.9090216,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765098521.1510756,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765098521.2023242,
+        "agent": "MasterAgent",
+        "action": "call_rca"
+    },
+    {
+        "timestamp": 1765098521.2309928,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765098521.2641022,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765098521.2923822,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765098521.3313327,
+        "agent": "MasterAgent",
+        "action": "call_customer"
+    },
+    {
+        "timestamp": 1765098521.3630784,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765112470.3062606,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765112470.427343,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765112807.942761,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765112808.0204635,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765112808.0732331,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.1176653,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765112808.170926,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.2080896,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765112808.2425835,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.2793472,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765112808.3181622,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.3575137,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765112808.4280338,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.4752908,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765112808.5096114,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.5664847,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.6013672,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.6388557,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.671795,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.7112112,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.7478976,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765112808.7925742,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765113541.0639658,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765113541.1142156,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765113541.16199,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765113541.199691,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765113543.3198702,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765113543.3653598,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765113543.4169805,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765113543.4609184,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765113543.508,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765113578.3416698,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765113590.419598,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765113590.4719903,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765113590.500068,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765113590.5165062,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765113590.5359802,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765113952.3509178,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765113952.377182,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765113952.4039023,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765113952.4263604,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765113952.443882,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    },
+    {
+        "timestamp": 1765114018.4923294,
+        "agent": "RCACAPAAgent",
+        "action": "generate_insight"
+    },
+    {
+        "timestamp": 1765114030.5728936,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765114030.6128,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765114030.6507387,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765114030.6695156,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765114032.743442,
+        "agent": "DataAnalysisAgent",
+        "action": "send_window"
+    },
+    {
+        "timestamp": 1765114032.814595,
+        "agent": "DiagnosisAgent",
+        "action": "send_to_master"
+    },
+    {
+        "timestamp": 1765114032.8526943,
+        "agent": "MasterAgent",
+        "action": "call_scheduler"
+    },
+    {
+        "timestamp": 1765114032.8903828,
+        "agent": "SchedulingAgent",
+        "action": "recommend_slot"
+    },
+    {
+        "timestamp": 1765114032.9254534,
+        "agent": "CustomerAgent",
+        "action": "notify_user"
+    }
+]
