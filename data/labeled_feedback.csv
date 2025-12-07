@@ -1,2 +1,0 @@
-engine_temp,battery_voltage,vibration,coolant_temp,engine_temp_avg,engine_temp_std,battery_avg,battery_drop,temp_rise_rate,coolant_rise_rate,vibration_std,dtc_flag,mileage,failure_class
-95.1,11.4,0.2,105.0,92.0,3.5,11.9,0.4,6.2,8.0,0.1,1,52000,1

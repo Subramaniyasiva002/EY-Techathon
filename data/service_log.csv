@@ -1,2 +1,0 @@
-timestamp,vehicle_id,predicted_failure,predicted_class,risk_score,resolved,confirmed_component,technician_notes
-2025-12-06T14:38:46.571124Z,VH005,cooling_failure,1,0.91,True,cooling_failure,Radiator cleaned; coolant leak fixed
