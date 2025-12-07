@@ -91,6 +91,18 @@
                 "rating": 5,
                 "comments": "excellent"
             }
+        },
+        {
+            "timestamp": "2025-12-07T16:49:35.072587",
+            "slot": "12:00 PM",
+            "booking_id": 86920,
+            "likely_failure": "cooling_failure",
+            "risk_score": 0.923,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "5",
+                "comments": "ok"
+            }
         }
     ],
     "VH002": [],
@@ -203,6 +215,18 @@
             "customer_feedback": {
                 "rating": "4",
                 "comments": "good"
+            }
+        },
+        {
+            "timestamp": "2025-12-07T16:44:45.371966",
+            "slot": "12:00 PM",
+            "booking_id": 50058,
+            "likely_failure": "engine_stress",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "3",
+                "comments": "goodie"
             }
         }
     ],
