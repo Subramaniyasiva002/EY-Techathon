@@ -1,86 +1,54 @@
-# booking_api.py
 from fastapi import FastAPI
-import random
+from datetime import datetime
+from pydantic import BaseModel
+from typing import Optional
+import uvicorn
 
-app = FastAPI(title="Mock Service Center Booking API")
+app = FastAPI(title="Service Center Booking API")
 
-# Store which vehicle booked which slot
-# None = available
-SLOTS = {
-    "09:00 AM": None,
-    "10:00 AM": None,
-    "11:00 AM": None,
-    "12:00 PM": None,
-    "01:00 PM": None,
-    "02:00 PM": None
-}
+from fastapi import FastAPI
+from datetime import datetime
+from pydantic import BaseModel
+from typing import Optional
+import uvicorn
+from booking_queue import BookingQueue
+from slots_manager import SlotsManager
+
+app = FastAPI(title="Service Center Booking API (Async Queue)")
+
+queue = BookingQueue()
+slots_mgr = SlotsManager()
+
+class BookingRequest(BaseModel):
+    vehicle_id: str
+    slot: str
+    note: Optional[str] = None
 
 @app.get("/slots")
-def get_slots():
-    """
-    Return all available slots.
-    A slot is available when its value is None.
-    """
-    available = [slot for slot, booked_by in SLOTS.items() if booked_by is None]
-    return {"available_slots": available}
-
+def get_available_slots():
+    # Read from persistent shared state
+    available = slots_mgr.get_slots()
+    return {"available_slots": available, "date": datetime.utcnow().date().isoformat()}
 
 @app.post("/book")
-def book_slot(vehicle_id: str, slot: str):
-    """
-    Book a slot for the given vehicle.
-    Rules:
-    - If the slot is invalid → fail
-    - If the same vehicle tries again → allow
-    - If another vehicle already booked it → fail
-    - Otherwise → book the slot
-    """
-    if slot not in SLOTS:
-        return {"status": "failed", "reason": "Invalid slot"}
-
-    current = SLOTS[slot]
-
-    # CASE 1: Same vehicle re-booking → ALLOW
-    if current == vehicle_id:
+def book_slot(booking: BookingRequest):
+    # Producer: Push to Message Queue
+    success = queue.enqueue(booking.vehicle_id, booking.slot, booking.note)
+    
+    if success:
         return {
-            "status": "success",
-            "vehicle_id": vehicle_id,
-            "slot": slot,
-            "booking_id": random.randint(10000, 99999),
-            "note": "Re-booking allowed for same vehicle"
+            "status": "queued",
+            "message": "Request accepted for processing",
+            "vehicle_id": booking.vehicle_id,
+            "slot": booking.slot
         }
-
-    # CASE 2: Slot booked by another vehicle → BLOCK
-    if current is not None and current != vehicle_id:
-        return {
-            "status": "failed",
-            "reason": f"Slot already booked by {current}"
-        }
-
-    # CASE 3: Slot is free → BOOK IT
-    SLOTS[slot] = vehicle_id
-
-    return {
-        "status": "success",
-        "vehicle_id": vehicle_id,
-        "slot": slot,
-        "booking_id": random.randint(10000, 99999)
-    }
-
+    else:
+        return {"status": "failed", "reason": "queue_error"}
 
 @app.post("/complete")
 def complete_service(slot: str):
-    """
-    Mark a service slot as completed and free the slot.
-    This MUST be called by MasterAgent after service is finished.
-    """
-    if slot not in SLOTS:
-        return {"status": "failed", "reason": "Invalid slot"}
+    slots_mgr.release_slot(slot)
+    return {"status": "slot_freed", "slot": slot}
 
-    # reset slot to available
-    SLOTS[slot] = None
-
-    return {
-        "status": "slot_reset",
-        "slot": slot
-    }
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=9000)

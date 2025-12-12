@@ -106,7 +106,71 @@
         }
     ],
     "VH002": [],
-    "VH003": [],
+    "VH003": [
+        {
+            "timestamp": "2025-12-10T04:42:46.773527",
+            "slot": "12:00 PM",
+            "booking_id": 81439,
+            "likely_failure": "battery_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "5",
+                "comments": "Awesome"
+            }
+        },
+        {
+            "timestamp": "2025-12-11T16:32:47.033588",
+            "slot": "12:00 PM",
+            "booking_id": "BK85419",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.794,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "4",
+                "comments": "well"
+            }
+        },
+        {
+            "timestamp": "2025-12-11T17:01:15.228117",
+            "status": "booked",
+            "slot": "10:00 AM",
+            "booking_id": "BK52395",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.662,
+            "priority": "MEDIUM",
+            "customer_feedback": {
+                "rating": "4",
+                "comments": "nice"
+            }
+        },
+        {
+            "timestamp": "2025-12-11T17:21:32.853465",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BK89494",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.929,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Great service!"
+            }
+        },
+        {
+            "timestamp": "2025-12-12T13:02:57.331041",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BKG-1765544577",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 3,
+                "comments": "vehicle"
+            }
+        }
+    ],
     "VH004": [],
     "VH005": [
         {
@@ -228,6 +292,74 @@
                 "rating": "3",
                 "comments": "goodie"
             }
+        },
+        {
+            "timestamp": "2025-12-10T04:20:41.152724",
+            "slot": "12:00 PM",
+            "booking_id": 60698,
+            "likely_failure": "vibration_failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "5",
+                "comments": "Good"
+            }
+        },
+        {
+            "timestamp": "2025-12-11T16:35:06.776202",
+            "slot": "12:00 PM",
+            "booking_id": "BK9599",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.923,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": "4",
+                "comments": "super"
+            }
+        },
+        {
+            "timestamp": "2025-12-11T17:20:39.854844",
+            "status": "Completed",
+            "slot": "10:00 AM",
+            "booking_id": "BK43666",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.684,
+            "priority": "MEDIUM",
+            "customer_feedback": {
+                "rating": "5",
+                "comments": "OMG"
+            }
+        },
+        {
+            "timestamp": "2025-12-12T08:58:41.337534",
+            "status": "Completed",
+            "slot": "10:00 AM",
+            "booking_id": "BKG-1765529921",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.615,
+            "priority": "MEDIUM"
+        },
+        {
+            "timestamp": "2025-12-12T09:54:03.022559",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BKG-1765533243",
+            "likely_failure": "Overstrain Failure",
+            "risk_score": 0.993,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 3,
+                "comments": "success"
+            }
+        },
+        {
+            "timestamp": "2025-12-12T11:22:12.902660",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BKG-1765538532",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH"
         }
     ],
     "VH006": [],

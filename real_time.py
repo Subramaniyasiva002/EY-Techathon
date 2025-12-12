@@ -5,6 +5,14 @@ from sample_store import SampleStore
 from state_model import VehicleState
 from orchestration_graph import final_graph
 
+# AUTO-RESET: Clear all state before starting simulation
+print("=" * 60)
+print("INITIALIZING REAL-TIME SIMULATION")
+print("=" * 60)
+from reset_system import reset
+reset()
+print("\n" + "=" * 60)
+
 diagnosis_agent = DiagnosisAgent()
 sample_store = SampleStore()
 
@@ -15,7 +23,7 @@ def diagnosis_callback(features):
     diagnosis = diagnosis_agent.predict(features)
     print("Diagnosis:", diagnosis)
 
-    sample_store.save_sample(features, diagnosis)
+    # sample_store.save_sample(features, diagnosis)  <-- Disabled: Only saving on confirmed booking now
 
     state = VehicleState(
         vehicle_id=features["vehicle_id"],
@@ -32,4 +40,4 @@ MAINT_HISTORY = {
 }
 
 agent = DataAnalysisAgent(maintenance_history=MAINT_HISTORY)
-agent.start(["VH001", "VH005"], diagnosis_callback)
+agent.start(["VH003" ,"VH005"], diagnosis_callback)

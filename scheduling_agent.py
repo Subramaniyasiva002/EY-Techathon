@@ -1,79 +1,47 @@
-# scheduling_agent.py
 import numpy as np
-from ueba_agent import UEBAAgent
 import json
 from datetime import datetime
-
+from booking_agent import BookingAgent
 
 class SchedulingAgent:
-    def __init__(self, q_table_path="models/q_table.npy"):
-        self.ueba = UEBAAgent()
+    def __init__(self):
+        self.booker = BookingAgent()
+        self.slot_list = ["09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "02:00 PM", "04:00 PM"]
         try:
-            self.Q = np.load(q_table_path)
-            print("[SchedulingAgent] Q-table loaded successfully.")
+            self.Q = np.load("models/q_table.npy")
+            print("[SchedulingAgent] RL model loaded – smart scheduling active")
         except:
-            # fallback: no RL model available
             self.Q = None
-            print("[SchedulingAgent] Q-table not found. Using fallback scheduling.")
+            print("[SchedulingAgent] No RL model → using safe fallback")
 
+    def get_demand_state(self, risk_score: float) -> int:
+        if risk_score > 0.75:  return 2   # urgent
+        if risk_score > 0.45:  return 1   # medium
+        return 0                                 # normal
 
-        self.forecast = self.load_forecast()
-        self.capacity_per_day = 15  # example: each center can handle 15 bookings/day
-        
-        # map action index to actual service time
-        self.slot_map = {
-            0: "09:00 AM",
-            1: "10:00 AM",
-            2: "11:00 AM",
-            3: "12:00 PM",
-            4: "01:00 PM",
-            5: "02:00 PM",
-        }
+    def recommend_slot(self, vehicle_id: str, risk_score: float) -> dict:
+        available = self.booker.get_slots()
 
-    def infer_demand_state(self, diagnosis):
-        """
-        Determine demand state based on risk or vehicle priority.
-        You can replace with real service center load.
-        """
-        risk = diagnosis["risk_score"]
+        if not available:
+            return {"recommended_slot": None, "reason": "no_slots_today"}
 
-        if risk > 0.75:  
-            return 2     # high demand handling (urgent)
-        elif risk > 0.45:
-            return 1     # medium
-        return 0         # low
+        if self.Q is not None:
+            state = self.get_demand_state(risk_score)
+            # pick best action only among available slots
+            action_values = self.Q[state]
+            best_action_idx = np.argmax(action_values)
+            best_slot = self.slot_list[best_action_idx]
 
-    def choose_slot(self, diagnosis):
-        slots = ["10:00 AM", "12:00 PM", "02:00 PM", "04:00 PM"]
-        today = datetime.utcnow().date()
-        
-        selected = slots[1]  # default slot
-        
-        # Check forecast
-        overloaded = self.is_day_overloaded(str(today))
-        
-        if overloaded:
-            print("[SchedulingAgent] ⚠️ Forecast indicates overload today. Using alternate time.")
-            selected = "04:00 PM"  # choose a low-demand slot
+            if best_slot in available:
+                return {"recommended_slot": best_slot, "method": "RL"}
+            # if best RL slot taken → pick best available using same values
+            candidates = [(i, self.slot_list[i]) for i in range(6) if self.slot_list[i] in available]
+            best_idx = max(candidates, key=lambda x: action_values[x[0]])[1]
+            return {"recommended_slot": best_idx, "method": "RL-fallback"}
 
-        return {
-            "vehicle_id": diagnosis["vehicle_id"],
-            "recommended_slot": selected,
-            "forecast_overload": overloaded
-        }
-
-    def load_forecast(self, path="service_forecast.json"):
-        try:
-            with open(path, "r") as f:
-                return json.load(f)
-        except:
-            return None
-
-    def is_day_overloaded(self, date_str):
-        if not self.forecast:
-            return False
-        
-        day_value = self.forecast["national_forecast"].get(date_str, 0)
-        
-        return day_value > self.capacity_per_day
-
+        # Safe heuristic fallback
+        preferred = ["10:00 AM", "12:00 PM", "02:00 PM", "04:00 PM"]
+        for slot in preferred:
+            if slot in available:
+                return {"recommended_slot": slot, "method": "heuristic"}
+        return {"recommended_slot": available[0], "method": "heuristic"}

@@ -10,15 +10,22 @@ class SampleStore:
         if not os.path.exists(self.file_path):
             with open(self.file_path, "w", newline="") as f:
                 writer = csv.writer(f)
+               
                 writer.writerow([
                     "timestamp",
                     "vehicle_id",
 
-                    # feature columns (align with RF features)
-                    "engine_temp","battery_voltage","vibration","coolant_temp",
-                    "engine_temp_avg","engine_temp_std","battery_avg","battery_drop",
-                    "temp_rise_rate","coolant_rise_rate","vibration_std",
-                    "dtc_flag","mileage",
+                    # AI4I Features
+                    "Type",
+                    "Air_temperature_K",
+                    "Process_temperature_K",
+                    "Rotational_speed_rpm",
+                    "Torque_Nm",
+                    "Tool_wear_min",
+
+                    # Engineering Features
+                    "proc_temp_avg",
+                    "part_failure_risk", # placeholder
 
                     # prediction info
                     "predicted_class",
@@ -29,23 +36,20 @@ class SampleStore:
                 ])
 
     def save_sample(self, features, diagnosis):
+        # We must align with what DataAnalysisAgent sends (AI4I features)
         row = [
             features.get("timestamp"),
             features.get("vehicle_id"),
 
-            features.get("engine_temp"),
-            features.get("battery_voltage"),
-            features.get("vibration"),
-            features.get("coolant_temp"),
-            features.get("engine_temp_avg"),
-            features.get("engine_temp_std"),
-            features.get("battery_avg"),
-            features.get("battery_drop"),
-            features.get("temp_rise_rate"),
-            features.get("coolant_rise_rate"),
-            features.get("vibration_std"),
-            features.get("dtc_flag"),
-            features.get("mileage"),
+            features.get("Type"),
+            features.get("Air_temperature_K"),
+            features.get("Process_temperature_K"),
+            features.get("Rotational_speed_rpm"),
+            features.get("Torque_Nm"),
+            features.get("Tool_wear_min"),
+            
+            features.get("proc_temp_avg"),
+            0, # placeholder
 
             diagnosis["predicted_class"],
             diagnosis["risk_score"],

@@ -21,13 +21,29 @@ ueba = UEBAAgent()
 # ============================================================
 def scheduling_step(state):
     diagnosis = state["diagnosis"]
+    vid = state["vehicle_id"]
 
     alert = ueba.log_event("MasterAgent", "call_scheduler")
     if alert["alert"]:
         print("\n🚨 UEBA ALERT:", alert["message"])
         return state
 
-    schedule = sched.choose_slot(diagnosis)
+    # Logic Update: If predicted class is 0 (No Failure), do not schedule
+    if diagnosis.get("predicted_class") == 0:
+        print(f"\n[MasterAgent] Vehicle {vid} is healthy (Class 0). Scheduling skipped.")
+        state["schedule"] = {"recommended_slot": None, "reason": "No Failure Detected"}
+        return state
+
+    # Logic Update: Check if already booked
+    from slots_manager import SlotsManager
+    sm = SlotsManager()
+    is_booked, slot = sm.has_active_booking(vid)
+    if is_booked:
+        print(f"\n[MasterAgent] Vehicle {vid} already has a booked slot at {slot}. Scheduling skipped.")
+        state["schedule"] = {"recommended_slot": None, "reason": "Already Booked", "existing_slot": slot}
+        return state
+
+    schedule = sched.recommend_slot(vid, diagnosis["risk_score"])
     state["schedule"] = schedule
     return state
 
@@ -43,9 +59,31 @@ def customer_step(state):
     print("\n--- CUSTOMER MESSAGE ---")
     print(msg)
 
-    ans = input("Book service? (y/n): ").strip().lower()
-    state["confirmed"] = True if ans == "y" else False
+    # Logic Fix: Don't ask to book if no slot is recommended (Healthy or No Capacity)
+    if not schedule or not schedule.get("recommended_slot"):
+        print("\n[System] No booking slot available or required. Skipping booking.")
+        state["confirmed"] = False
+        return state
 
+    # ASYNC HANDOFF: Post notification to dashboard instead of blocking terminal
+    from notifications_manager import NotificationsManager
+    nm = NotificationsManager()
+    
+    nm.add_notification(
+        state["vehicle_id"], 
+        msg, 
+        diagnosis["likely_failure"], 
+        schedule.get("recommended_slot"),
+        diagnosis["risk_score"],
+        diagnosis["priority"],
+        features=state.get("features")
+    )
+    
+    print("\n[Master] 🔔 Notification sent to Customer Dashboard.")
+    print(f"Please check 'customer_dashboard.py' to approve booking for {schedule.get('recommended_slot')}.")
+    
+    state["confirmed"] = False # Defer booking to UI
+    state["async_handoff"] = True # Signal that this is NOT a rejection
     return state
 
 
@@ -53,20 +91,34 @@ def customer_step(state):
 #   BOOKING STEP
 # ============================================================
 def booking_step(state):
+    # Async Handoff: If logic was deferred to dashboard, skip this step
+    if state.get("async_handoff"):
+        print("[Master] Booking logic deferred to Dashboard. Async Handoff complete.")
+        return state
+
     if not state.get("confirmed"):
         print("\nCustomer declined service.")
+        # Log negative feedback for RL training
+        vid = state["vehicle_id"]
+        diagnosis = state["diagnosis"]
+        slot = state.get("schedule", {}).get("recommended_slot")
+        fb.record_rejection(vid, diagnosis, slot)
         return state
 
     vid = state["vehicle_id"]
     slot = state["schedule"]["recommended_slot"]
+    method = state["schedule"].get("method", "heuristic")
 
-    result = booker.book(vid, slot)
+    result = booker.book(vid, slot, method)
     print("\nBOOKING RESULT:", result)
 
     state["booking"] = result
 
-    if result["status"] == "success":
-        requests.post("http://localhost:9000/complete", params={"slot": slot})
+    # Async Queue Handling: 'queued' is also a valid positive state
+    if result["status"] in ["success", "queued"]:
+        print(f"\n[Master] Booking accepted (Status: {result['status']}). Worker will process it.")
+    else:
+        print(f"\n[Master] Booking rejected (Status: {result['status']}).")
 
     return state
 
@@ -76,7 +128,8 @@ def booking_step(state):
 # ============================================================
 def feedback_step(state):
     booking = state.get("booking")
-    if not booking or booking.get("status") != "success":
+    # Accept 'queued' as valid for logging purposes in this simulation
+    if not booking or booking.get("status") not in ["success", "queued"]:
         return state
 
     vid = state["vehicle_id"]
@@ -88,16 +141,11 @@ def feedback_step(state):
     print("\n--- SERVICE LOGGED ---")
     print(log)
 
-    rating = input("Rate service (1–5): ").strip()
-    comments = input("Comments: ").strip()
+    print("\n--- SERVICE LOGGED ---")
+    print(log)
 
-    fb_data = fb.collect_feedback(vid, rating, comments)
-    state["feedback"] = fb_data
-
-    actual = diagnosis["likely_failure"]
-    fb.update_true_label(vid, actual)
-
-    print("TRUE LABEL SAVED:", actual)
+    print("\n[Master] Service booked. Please complete service and provide feedback via the Dashboard.")
+    print("Go to: Streamlit Dashboard > Customer Feedback")
 
     return state
 

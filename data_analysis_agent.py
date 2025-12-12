@@ -7,7 +7,7 @@ import time
 from collections import deque
 import numpy as np
 from ueba_agent import UEBAAgent
-POLL_INTERVAL = 10          # seconds
+POLL_INTERVAL = 5          # seconds
 WINDOW_SIZE = 10            # number of readings in rolling context window
 TELEMATICS_URL = "http://localhost:8000/telematics/{}"
 
@@ -52,53 +52,44 @@ class DataAnalysisAgent:
         """Extract meaningful features from 30 readings."""
         window = list(self.windows[vehicle_id])
 
-        engine_temp = np.array([w["engine_temp"] for w in window])
-        battery_voltage = np.array([w["battery_voltage"] for w in window])
-        vibration = np.array([w["vibration"] for w in window])
-        coolant = np.array([w["coolant_temp"] for w in window])
+        # AI4I fields
+        air_temp = np.array([w["Air_temperature_K"] for w in window])
+        proc_temp = np.array([w["Process_temperature_K"] for w in window])
+        rpm = np.array([w["Rotational_speed_rpm"] for w in window])
+        torque = np.array([w["Torque_Nm"] for w in window])
+        tool_wear = np.array([w["Tool_wear_min"] for w in window])
+        
+        # Ensure we capture Type so we can pass it to the model if needed (encoded as 0,1,2)
+        machine_type = window[-1]["Type"]
 
-        # --- Maintenance history enrichment (for predictive maintenance) ---
+        # --- Maintenance history enrichment (placeholder logic preserved) ---
         m_hist = self.maintenance_history.get(vehicle_id, {})
-        last_service_km = m_hist.get("last_service_km", window[-1]["mileage"])
-        last_service_days_ago = m_hist.get("last_service_days_ago", 0)
-        num_repairs = m_hist.get("num_repairs", 0)
-        last_failure_km = m_hist.get("last_failure_km", last_service_km)
-
-        # Build feature dict
+        # Note: 'mileage' is no longer in the standard AI4I fields, 
+        # so we depend on provided history or default to 0 for now.
+        last_service_time = m_hist.get("last_service_time", 0) 
+        
+        # Build feature dict matching model expectations (roughly)
         features = {
             "timestamp": window[-1]["timestamp"],
             "vehicle_id": vehicle_id,
+            "Type": machine_type,
             
-            # latest values
-            "engine_temp": float(engine_temp[-1]),
-            "battery_voltage": float(battery_voltage[-1]),
-            "vibration": float(vibration[-1]),
-            "coolant_temp": float(coolant[-1]),
-            "dtc_code": window[-1]["dtc_code"],
-            "mileage": window[-1]["mileage"],
+            # Latest values
+            "Air_temperature_K": float(air_temp[-1]),
+            "Process_temperature_K": float(proc_temp[-1]),
+            "Rotational_speed_rpm": float(rpm[-1]),
+            "Torque_Nm": float(torque[-1]),
+            "Tool_wear_min": float(tool_wear[-1]),
 
-            # rolling stats
-            "engine_temp_avg": float(engine_temp.mean()),
-            "engine_temp_std": float(engine_temp.std()),
-            "battery_avg": float(battery_voltage.mean()),
-            "battery_drop": float(battery_voltage[0] - battery_voltage[-1]),
+            # Rolling stats (Engineering features)
+            "proc_temp_avg": float(proc_temp.mean()),
+            "rpm_std": float(rpm.std()),
+            "torque_avg": float(torque.mean()),
+            "torque_std": float(torque.std()),
+            "wear_rate": float(tool_wear[-1] - tool_wear[0]),
 
-            # trend features
-            "temp_rise_rate": float(engine_temp[-1] - engine_temp[0]),
-            "vibration_std": float(vibration.std()),
-            "coolant_rise_rate": float(coolant[-1] - coolant[0]),
-
-            # flags
-            "dtc_flag": 1 if window[-1]["dtc_code"] != "P0000" else 0,
-            "anomaly_flag": 1 if engine_temp[-1] > 105 or battery_voltage[-1] < 11.5 else 0,
-
-            # maintenance / lifecycle context
-            "last_service_km": float(last_service_km),
-            "km_since_service": float(window[-1]["mileage"] - last_service_km),
-            "last_service_days_ago": float(last_service_days_ago),
-            "num_repairs": float(num_repairs),
-            "last_failure_km": float(last_failure_km),
-            "km_since_failure": float(window[-1]["mileage"] - last_failure_km),
+            # Anomaly flag for ground truth monitoring
+            "has_anomaly": window[-1].get("has_anomaly", False)
         }
 
         return features

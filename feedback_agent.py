@@ -14,6 +14,7 @@ class FeedbackAgent:
         """Log completed service in DB"""
         entry = {
             "timestamp": datetime.utcnow().isoformat(),
+            "status": "booked",
             "slot": booking["slot"],
             "booking_id": booking["booking_id"],
             "likely_failure": diagnosis["likely_failure"],
@@ -21,13 +22,37 @@ class FeedbackAgent:
             "priority": diagnosis["priority"]
         }
 
+        self.db[vehicle_id] = self.db.get(vehicle_id, [])
         self.db[vehicle_id].append(entry)
+        self._save_db()
+        return entry
 
-        # Save file
+    def mark_service_completed(self, vehicle_id):
+        """Mark the last service as 'Completed' to trigger feedback"""
+        if not self.db.get(vehicle_id):
+            return False
+        
+        self.db[vehicle_id][-1]["status"] = "Completed"
+        self._save_db()
+        return True
+
+    def record_rejection(self, vehicle_id, diagnosis, slot):
+        """Log rejected service offer (Implicit Negative Feedback)"""
+        entry = {
+            "timestamp": datetime.utcnow().isoformat(),
+            "status": "declined",
+            "rejected_slot": slot,
+            "likely_failure": diagnosis["likely_failure"],
+            "risk_score": diagnosis["risk_score"]
+        }
+        self.db[vehicle_id] = self.db.get(vehicle_id, [])
+        self.db[vehicle_id].append(entry)
+        self._save_db()
+        return entry
+
+    def _save_db(self):
         with open(self.db_path, "w") as f:
             json.dump(self.db, f, indent=4)
-
-        return entry
 
     def collect_feedback(self, vehicle_id, rating, comments):
         """Append customer feedback to last service"""
