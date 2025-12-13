@@ -34,7 +34,38 @@ class FeedbackAgent:
         
         self.db[vehicle_id][-1]["status"] = "Completed"
         self._save_db()
+        
+        # OUTER LOOP TRIGGER: Check if we should run RCA/CAPA analysis
+        self._check_outer_loop_trigger()
+        
         return True
+    
+    def _check_outer_loop_trigger(self):
+        """Auto-trigger RCA/CAPA analysis after every 8-10 completed services"""
+        # Count total completed services across all vehicles
+        total_completed = 0
+        for vehicle_id, records in self.db.items():
+            if vehicle_id.startswith("_"):
+                continue  # Skip metadata
+            total_completed += sum(1 for r in records if r.get("status") == "Completed")
+        
+        # Check if we've hit the threshold (every 10 services)
+        if total_completed > 0 and total_completed % 10 == 0:
+            print("\n" + "!" * 70)
+            print(f"OUTER LOOP THRESHOLD REACHED: {total_completed} services completed")
+            print("Triggering Manufacturing Insights Analysis...")
+            print("!" * 70)
+            
+            # Import and run RCA/CAPA
+            from rca_capa_agent import RCACAPAAgent
+            rca = RCACAPAAgent(db_path=self.db_path)
+            insight = rca.generate_outer_loop_insight()
+            
+            if insight:
+                print(f"\n[OUTER LOOP] Insight generated and saved to manufacturing_insights.json")
+            else:
+                print(f"\n[OUTER LOOP] Insufficient data for analysis (need 8+ services)")
+
 
     def record_rejection(self, vehicle_id, diagnosis, slot):
         """Log rejected service offer (Implicit Negative Feedback)"""

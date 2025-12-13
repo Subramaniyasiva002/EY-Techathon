@@ -147,6 +147,9 @@ def feedback_step(state):
     print("\n[Master] Service booked. Please complete service and provide feedback via the Dashboard.")
     print("Go to: Streamlit Dashboard > Customer Feedback")
 
+    # THIS IS THE OUTER LOOP ENTRY POINT
+    trigger_outer_loop_if_needed()
+    
     return state
 
 

@@ -2,9 +2,10 @@
     "VH001": [
         {
             "timestamp": "2025-12-06T17:50:30.833325",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 92617,
-            "likely_failure": "cooling_failure",
+            "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.897,
             "priority": "HIGH",
             "customer_feedback": {
@@ -14,9 +15,10 @@
         },
         {
             "timestamp": "2025-12-07T06:01:50.436670",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 91739,
-            "likely_failure": "cooling_failure",
+            "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.92,
             "priority": "HIGH",
             "customer_feedback": {
@@ -26,9 +28,10 @@
         },
         {
             "timestamp": "2025-12-07T06:07:43.076289",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 17015,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 0.987,
             "priority": "HIGH",
             "customer_feedback": {
@@ -38,9 +41,10 @@
         },
         {
             "timestamp": "2025-12-07T06:33:38.206484",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 11851,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 0.997,
             "priority": "HIGH",
             "customer_feedback": {
@@ -50,17 +54,23 @@
         },
         {
             "timestamp": "2025-12-07T06:34:26.419902",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 61704,
-            "likely_failure": "cooling_failure",
+            "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.9,
-            "priority": "HIGH"
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Service completed"
+            }
         },
         {
             "timestamp": "2025-12-07T06:57:05.892449",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 89053,
-            "likely_failure": "cooling_failure",
+            "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.883,
             "priority": "HIGH",
             "customer_feedback": {
@@ -70,9 +80,10 @@
         },
         {
             "timestamp": "2025-12-07T09:02:00.860641",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 43145,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 0.99,
             "priority": "HIGH",
             "customer_feedback": {
@@ -82,9 +93,10 @@
         },
         {
             "timestamp": "2025-12-07T09:06:37.209061",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 48555,
-            "likely_failure": "cooling_failure",
+            "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.91,
             "priority": "HIGH",
             "customer_feedback": {
@@ -94,13 +106,14 @@
         },
         {
             "timestamp": "2025-12-07T16:49:35.072587",
+            "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": 86920,
-            "likely_failure": "cooling_failure",
+            "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.923,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "5",
+                "rating": 5,
                 "comments": "ok"
             }
         }
@@ -109,25 +122,27 @@
     "VH003": [
         {
             "timestamp": "2025-12-10T04:42:46.773527",
+            "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": 81439,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "5",
+                "rating": 5,
                 "comments": "Awesome"
             }
         },
         {
             "timestamp": "2025-12-11T16:32:47.033588",
+            "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": "BK85419",
             "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.794,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "4",
+                "rating": 4,
                 "comments": "well"
             }
         },
@@ -140,7 +155,7 @@
             "risk_score": 0.662,
             "priority": "MEDIUM",
             "customer_feedback": {
-                "rating": "4",
+                "rating": 4,
                 "comments": "nice"
             }
         },
@@ -169,15 +184,36 @@
                 "rating": 3,
                 "comments": "vehicle"
             }
+        },
+        {
+            "timestamp": "2025-12-13T04:24:33.532242",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BKG-1765599873",
+            "likely_failure": "Power/Battery Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 1,
+                "comments": "Great service nice"
+            }
+        },
+        {
+            "timestamp": "2025-12-13T04:29:00.956821",
+            "status": "declined",
+            "rejected_slot": "12:00 PM",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.0
         }
     ],
     "VH004": [],
     "VH005": [
         {
             "timestamp": "2025-12-07T06:57:33.090065",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 84702,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -187,9 +223,10 @@
         },
         {
             "timestamp": "2025-12-07T06:58:32.713999",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 17503,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -199,9 +236,10 @@
         },
         {
             "timestamp": "2025-12-07T08:51:02.049097",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 68045,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 0.997,
             "priority": "HIGH",
             "customer_feedback": {
@@ -211,9 +249,10 @@
         },
         {
             "timestamp": "2025-12-07T09:01:06.275008",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 44562,
-            "likely_failure": "engine_stress",
+            "likely_failure": "Overstrain Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -223,9 +262,10 @@
         },
         {
             "timestamp": "2025-12-07T09:04:49.566451",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 32975,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 0.997,
             "priority": "HIGH",
             "customer_feedback": {
@@ -235,9 +275,10 @@
         },
         {
             "timestamp": "2025-12-07T09:07:17.629319",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 84255,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -247,9 +288,10 @@
         },
         {
             "timestamp": "2025-12-07T09:08:05.766379",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 74793,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -259,61 +301,66 @@
         },
         {
             "timestamp": "2025-12-07T13:19:26.705862",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 46309,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "5",
+                "rating": 5,
                 "comments": "good"
             }
         },
         {
             "timestamp": "2025-12-07T13:26:35.145671",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 34465,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "4",
+                "rating": 4,
                 "comments": "good"
             }
         },
         {
             "timestamp": "2025-12-07T16:44:45.371966",
+            "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": 50058,
-            "likely_failure": "engine_stress",
+            "likely_failure": "Overstrain Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "3",
+                "rating": 3,
                 "comments": "goodie"
             }
         },
         {
             "timestamp": "2025-12-10T04:20:41.152724",
+            "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": 60698,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "5",
+                "rating": 5,
                 "comments": "Good"
             }
         },
         {
             "timestamp": "2025-12-11T16:35:06.776202",
+            "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": "BK9599",
             "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.923,
             "priority": "HIGH",
             "customer_feedback": {
-                "rating": "4",
+                "rating": 4,
                 "comments": "super"
             }
         },
@@ -326,7 +373,7 @@
             "risk_score": 0.684,
             "priority": "MEDIUM",
             "customer_feedback": {
-                "rating": "5",
+                "rating": 5,
                 "comments": "OMG"
             }
         },
@@ -337,7 +384,11 @@
             "booking_id": "BKG-1765529921",
             "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.615,
-            "priority": "MEDIUM"
+            "priority": "MEDIUM",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Service completed"
+            }
         },
         {
             "timestamp": "2025-12-12T09:54:03.022559",
@@ -359,7 +410,11 @@
             "booking_id": "BKG-1765538532",
             "likely_failure": "Heat Dissipation Failure",
             "risk_score": 1.0,
-            "priority": "HIGH"
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Service completed"
+            }
         }
     ],
     "VH006": [],
@@ -367,9 +422,10 @@
     "VH008": [
         {
             "timestamp": "2025-12-07T08:58:03.789327",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 12088,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -379,9 +435,10 @@
         },
         {
             "timestamp": "2025-12-07T09:01:24.149495",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 18178,
-            "likely_failure": "engine_stress",
+            "likely_failure": "Overstrain Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -391,9 +448,10 @@
         },
         {
             "timestamp": "2025-12-07T09:04:08.201374",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 42870,
-            "likely_failure": "engine_stress",
+            "likely_failure": "Overstrain Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -403,9 +461,10 @@
         },
         {
             "timestamp": "2025-12-07T09:05:25.854134",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 22278,
-            "likely_failure": "engine_stress",
+            "likely_failure": "Overstrain Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -415,9 +474,10 @@
         },
         {
             "timestamp": "2025-12-07T09:06:08.903735",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 24135,
-            "likely_failure": "battery_failure",
+            "likely_failure": "Power/Battery Failure",
             "risk_score": 1.0,
             "priority": "HIGH",
             "customer_feedback": {
@@ -427,9 +487,10 @@
         },
         {
             "timestamp": "2025-12-07T09:07:36.728140",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 23703,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 0.997,
             "priority": "HIGH",
             "customer_feedback": {
@@ -439,9 +500,10 @@
         },
         {
             "timestamp": "2025-12-07T09:08:19.919526",
+            "status": "Completed",
             "slot": "10:00 AM",
             "booking_id": 97661,
-            "likely_failure": "vibration_failure",
+            "likely_failure": "Tool Wear/Vibration Failure",
             "risk_score": 0.997,
             "priority": "HIGH",
             "customer_feedback": {

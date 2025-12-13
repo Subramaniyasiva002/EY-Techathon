@@ -1,0 +1,72 @@
+[
+    {
+        "generated_at": "2025-12-13T04:11:34.418202",
+        "batch_summary": "36 services from 4 vehicles",
+        "top_recurring_defect": "vibration_failure",
+        "occurrences": 10,
+        "fleet_impact_percent": 27.8,
+        "high_priority_cases": 34,
+        "avg_risk_score": 0.954,
+        "avg_customer_rating": 4.19,
+        "root_cause": "Unknown - requires detailed investigation",
+        "capa_recommendation": "Initiate quality investigation with field samples",
+        "process_change": "TBD pending RCA completion",
+        "expected_defect_reduction": "15-25%",
+        "severity": "CRITICAL",
+        "action": "Immediate R&D + Quality escalation",
+        "all_failure_types": {
+            "cooling_failure": 6,
+            "battery_failure": 7,
+            "Heat Dissipation Failure": 7,
+            "vibration_failure": 10,
+            "engine_stress": 5,
+            "Overstrain Failure": 1
+        }
+    },
+    {
+        "generated_at": "2025-12-13T04:12:52.462199",
+        "batch_summary": "36 services from 4 vehicles",
+        "top_recurring_defect": "vibration_failure",
+        "occurrences": 10,
+        "fleet_impact_percent": 27.8,
+        "high_priority_cases": 34,
+        "avg_risk_score": 0.954,
+        "avg_customer_rating": 4.19,
+        "root_cause": "Excessive vibration due to bearing wear and imbalance",
+        "capa_recommendation": "Upgrade to precision-grade bearings + implement dynamic balancing",
+        "process_change": "Add vibration testing station at end-of-line (< 2mm/s RMS)",
+        "expected_defect_reduction": "30-40%",
+        "severity": "CRITICAL",
+        "action": "Immediate R&D + Quality escalation",
+        "all_failure_types": {
+            "cooling_failure": 6,
+            "battery_failure": 7,
+            "Heat Dissipation Failure": 7,
+            "vibration_failure": 10,
+            "engine_stress": 5,
+            "Overstrain Failure": 1
+        }
+    },
+    {
+        "generated_at": "2025-12-13T04:18:20.659290",
+        "batch_summary": "36 services from 4 vehicles",
+        "top_recurring_defect": "Heat Dissipation Failure",
+        "occurrences": 13,
+        "fleet_impact_percent": 36.1,
+        "high_priority_cases": 34,
+        "avg_risk_score": 0.954,
+        "avg_customer_rating": 4.19,
+        "root_cause": "Insufficient cooling capacity under high load conditions",
+        "capa_recommendation": "Upgrade thermal interface material + add passive heat spreader to motor housing",
+        "process_change": "Increase thermal paste application thickness from 0.5mm to 0.8mm",
+        "expected_defect_reduction": "35-45%",
+        "severity": "CRITICAL",
+        "action": "Immediate R&D + Quality escalation",
+        "all_failure_types": {
+            "Heat Dissipation Failure": 13,
+            "Power/Battery Failure": 7,
+            "Tool Wear/Vibration Failure": 10,
+            "Overstrain Failure": 6
+        }
+    }
+]
