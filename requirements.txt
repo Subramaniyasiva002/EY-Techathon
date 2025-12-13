@@ -11,3 +11,5 @@ langchain-core
 
 
 lightgbm
+psutil
+joblib

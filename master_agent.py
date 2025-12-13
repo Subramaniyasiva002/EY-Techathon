@@ -24,9 +24,15 @@ def scheduling_step(state):
     vid = state["vehicle_id"]
 
     alert = ueba.log_event("MasterAgent", "call_scheduler")
-    if alert["alert"]:
-        print("\n🚨 UEBA ALERT:", alert["message"])
+    
+    # UEBA ENFORCEMENT: Block if action not allowed
+    if not alert.get("allowed", True):
+        print(f"\n[SECURITY] Workflow BLOCKED by UEBA")
+        state["error"] = "SECURITY_VIOLATION"
         return state
+    
+    if alert.get("alert"):
+        print(f"\n[UEBA WARNING] {alert.get('message', 'Anomaly detected')}")
 
     # Logic Update: If predicted class is 0 (No Failure), do not schedule
     if diagnosis.get("predicted_class") == 0:
