@@ -1,1 +1,58 @@
-{}
+{
+    "VH005": {
+        "timestamp": 1765687145.9224412,
+        "message": "Hello! Here is the latest health update for your vehicle **VH005**.\n\n**Issue Detected:** Overstrain Failure\n**Details:** Your vehicle shows signs of mechanical overstrain. Continuous use under this condition may lead to component fatigue or sudden failure.\n\u26a0\ufe0f This requires immediate attention to avoid a breakdown.\n\nWould you like to book a service slot at **12:00 PM**?",
+        "likely_failure": "Overstrain Failure",
+        "recommended_slot": "12:00 PM",
+        "risk_score": 0.877,
+        "priority": "HIGH",
+        "features": {
+            "timestamp": 1765687143.8094237,
+            "vehicle_id": "VH005",
+            "Type": 0,
+            "Air_temperature_K": 295.24449443450527,
+            "Process_temperature_K": 309.5348160090629,
+            "Rotational_speed_rpm": 2444.0,
+            "Torque_Nm": 53.67863625065061,
+            "Tool_wear_min": 220.77300221231994,
+            "proc_temp_avg": 311.15599229552134,
+            "rpm_std": 285.6142328386315,
+            "torque_avg": 40.62320441310184,
+            "torque_std": 6.86263034177713,
+            "wear_rate": 127.17775102110014,
+            "has_anomaly": true,
+            "Power_W": 13735.654458542984,
+            "Strain_Index": 11850.793679719205,
+            "Temp_Diff": 14.290321574557652
+        },
+        "status": "pending"
+    },
+    "VH003": {
+        "timestamp": 1765687132.523963,
+        "message": "Hello! Here is the latest health update for your vehicle **VH003**.\n\n**Issue Detected:** Heat Dissipation Failure\n**Details:** We detected overheating patterns in the engine/process temperature. This may cause performance loss or unexpected shutdown if not serviced soon.\n\u26a0\ufe0f This requires immediate attention to avoid a breakdown.\n\nWould you like to book a service slot at **02:00 PM**?",
+        "likely_failure": "Heat Dissipation Failure",
+        "recommended_slot": "02:00 PM",
+        "risk_score": 1.0,
+        "priority": "HIGH",
+        "features": {
+            "timestamp": 1765687130.4270976,
+            "vehicle_id": "VH003",
+            "Type": 0,
+            "Air_temperature_K": 301.7536021776502,
+            "Process_temperature_K": 308.12720108043106,
+            "Rotational_speed_rpm": 1303.0,
+            "Torque_Nm": 49.35414386162195,
+            "Tool_wear_min": 30.290679967052036,
+            "proc_temp_avg": 315.58999657855367,
+            "rpm_std": 146.19110780071406,
+            "torque_avg": 37.247070625771975,
+            "torque_std": 5.755886791507757,
+            "wear_rate": 20.4529220107289,
+            "has_anomaly": true,
+            "Power_W": 6733.094657592299,
+            "Strain_Index": 1494.970576760236,
+            "Temp_Diff": 6.373598902780884
+        },
+        "status": "pending"
+    }
+}

@@ -51,6 +51,11 @@ class UEBAAgent:
             "DataAnalysisAgent": [
                 "compute_features",
                 "send_window"
+            ],
+            "CustomerAgent": [
+                "notify_user",
+                "send_notification",
+                "generate_message"
             ]
         }
         

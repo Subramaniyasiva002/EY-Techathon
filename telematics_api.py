@@ -25,8 +25,8 @@ def get_telematics(vehicle_id: str):
     # Vehicles with induced failures (Reduced frequency)
     # Default is Healthy. 20% chance of anomaly for testing flow.
     anomaly = False
-    if vehicle_id in ["VH005", "VH003"]:
-        anomaly = random.random() < 0.2 # 20% chance of failure interaction
+    if vehicle_id in ["VH002", "VH006", "VH009"]:
+        anomaly = random.random() < 0.5 # 50% chance of failure interaction
 
     # ----------------------------------------------------
     # NORMAL SENSOR RANGES (Real AI4I dataset)

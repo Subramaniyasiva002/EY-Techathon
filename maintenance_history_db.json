@@ -204,6 +204,19 @@
             "rejected_slot": "12:00 PM",
             "likely_failure": "Heat Dissipation Failure",
             "risk_score": 0.0
+        },
+        {
+            "timestamp": "2025-12-14T04:38:10.161166",
+            "status": "Completed",
+            "slot": "10:00 AM",
+            "booking_id": "BKG-1765687090",
+            "likely_failure": "Tool Wear/Vibration Failure",
+            "risk_score": 0.651,
+            "priority": "MEDIUM",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Great service!"
+            }
         }
     ],
     "VH004": [],
@@ -408,6 +421,32 @@
             "status": "Completed",
             "slot": "12:00 PM",
             "booking_id": "BKG-1765538532",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Service completed"
+            }
+        },
+        {
+            "timestamp": "2025-12-14T04:37:32.957460",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BKG-1765687052",
+            "likely_failure": "Overstrain Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "Service completed"
+            }
+        },
+        {
+            "timestamp": "2025-12-14T04:38:47.583628",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "BKG-1765687127",
             "likely_failure": "Heat Dissipation Failure",
             "risk_score": 1.0,
             "priority": "HIGH",

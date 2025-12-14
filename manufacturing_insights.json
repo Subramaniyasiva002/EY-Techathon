@@ -68,5 +68,27 @@
             "Tool Wear/Vibration Failure": 10,
             "Overstrain Failure": 6
         }
+    },
+    {
+        "generated_at": "2025-12-14T04:38:57.852978",
+        "batch_summary": "40 services from 4 vehicles",
+        "top_recurring_defect": "Heat Dissipation Failure",
+        "occurrences": 14,
+        "fleet_impact_percent": 35.0,
+        "high_priority_cases": 37,
+        "avg_risk_score": 0.95,
+        "avg_customer_rating": 4.13,
+        "root_cause": "Insufficient cooling capacity under high load conditions",
+        "capa_recommendation": "Upgrade thermal interface material + add passive heat spreader to motor housing",
+        "process_change": "Increase thermal paste application thickness from 0.5mm to 0.8mm",
+        "expected_defect_reduction": "35-45%",
+        "severity": "CRITICAL",
+        "action": "Immediate R&D + Quality escalation",
+        "all_failure_types": {
+            "Heat Dissipation Failure": 14,
+            "Power/Battery Failure": 8,
+            "Tool Wear/Vibration Failure": 11,
+            "Overstrain Failure": 7
+        }
     }
 ]
