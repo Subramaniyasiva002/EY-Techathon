@@ -40,4 +40,4 @@ MAINT_HISTORY = {
 }
 
 agent = DataAnalysisAgent(maintenance_history=MAINT_HISTORY)
-agent.start(["VH001", "VH002", "VH003" ,"VH004", "VH005", "VH006", "VH007", "VH008", "VH009", "VH010"], diagnosis_callback)
+agent.start(["VH001", "VH002", "VH003" ,"VH004", "VH005", "VH006","VH007","VH008","VH009","VH010"], diagnosis_callback)

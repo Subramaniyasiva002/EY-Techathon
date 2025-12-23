@@ -670,5 +670,1109 @@
         "agent": "MasterAgent",
         "action": "call_scheduler",
         "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:07.049233",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:09.721636",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:09.769562",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:11.852333",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:11.873743",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:11.894769",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:13.962205",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:16.004690",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:16.036474",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:16.058109",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:18.139847",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:18.165326",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:18.186168",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:20.249617",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:20.271395",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:20.291112",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:22.356953",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:22.390291",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:22.412498",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:24.480107",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:26.517051",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:26.539083",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:26.561890",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:28.660680",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:28.694062",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:28.720359",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:30.786004",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:30.810429",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:30.833662",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:32.908042",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:34.952442",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:34.991579",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:35.022304",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:42.110701",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:42.132482",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:42.154037",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:44.221070",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:44.244318",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:44.267184",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:46.313840",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:46.339580",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:46.364186",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:48.424100",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:48.455237",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:48.491904",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:50.563751",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:50.598673",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:50.626878",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:52.698881",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:52.723413",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:52.746977",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:54.789353",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:54.809140",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T11:02:54.829221",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:46.404624",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:49.604722",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:49.640112",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:51.956983",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:54.019041",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:54.065495",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:54.099783",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:56.161990",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:56.191497",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:56.219442",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:58.324743",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:58.354504",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:22:58.381353",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:00.483120",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:00.513175",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:00.540615",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:02.623374",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:02.656367",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:02.684758",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:07.787204",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:07.822196",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:07.857664",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:09.943899",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:09.978257",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:10.003407",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:12.097073",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:12.129917",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:12.161765",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:14.259759",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:14.310569",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:14.350253",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:16.416323",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:18.507797",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:18.537077",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:18.561905",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:20.663411",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:20.688878",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:20.712458",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:25.783380",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:25.824534",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:25.855703",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:27.947564",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:30.016172",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:30.066788",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:30.105830",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:32.185232",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:32.237719",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:32.279696",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:34.409290",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:34.445477",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:34.475222",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:36.573784",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:36.619110",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:36.657281",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:38.739824",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:40.887499",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:40.918309",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:40.950755",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:46.023603",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:46.049314",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:46.071832",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:46.096613",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:48.178087",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:48.214970",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:48.246408",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:50.353435",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:50.397248",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:50.443338",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:52.501674",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:54.616695",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:54.651261",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:54.681671",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:56.778535",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:56.813923",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:56.846162",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:58.919368",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:58.966196",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:23:58.997321",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:04.097163",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:04.152108",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:04.223046",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:06.327517",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:06.386862",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:06.427294",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:08.508961",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:08.541132",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:08.568871",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:10.663830",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:12.743782",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:12.788964",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:12.830098",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:14.925682",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:14.969440",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:15.002337",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:17.093655",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:17.124716",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:17.150786",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T14:24:19.230095",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:11.343968",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:16.091372",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:16.129328",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:18.255390",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:20.309866",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:20.349271",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:20.385191",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:22.467120",
+        "agent": "CustomerAgent",
+        "action": "notify_user",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:24.554659",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:24.646922",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:24.713233",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:26.808358",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:26.840421",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:26.875370",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:28.954896",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:28.995654",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:29.027537",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:31.125382",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:31.196321",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:31.227919",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:33.311851",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:33.362873",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:33.405093",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:35.492127",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:35.530657",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:35.565839",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:37.655860",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:37.696514",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:37.727855",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:39.786720",
+        "agent": "DataAnalysisAgent",
+        "action": "send_window",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:39.826717",
+        "agent": "DiagnosisAgent",
+        "action": "diagnosis_complete",
+        "allowed": true
+    },
+    {
+        "timestamp": "2025-12-16T18:24:39.859374",
+        "agent": "MasterAgent",
+        "action": "call_scheduler",
+        "allowed": true
     }
 ]

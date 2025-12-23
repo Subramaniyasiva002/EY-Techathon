@@ -116,9 +116,69 @@
                 "rating": 5,
                 "comments": "ok"
             }
+        },
+        {
+            "timestamp": "2025-12-16T14:23:25.472077",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "B1765895005",
+            "likely_failure": "Tool Wear/Vibration Failure",
+            "risk_score": 0.916,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "nice"
+            }
+        },
+        {
+            "timestamp": "2025-12-16T14:29:05.958544",
+            "status": "declined",
+            "rejected_slot": "02:00 PM",
+            "likely_failure": "Overstrain Failure",
+            "risk_score": 0.0
+        },
+        {
+            "timestamp": "2025-12-16T18:25:11.198938",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "B1765909511",
+            "likely_failure": "Overstrain Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "nice"
+            }
         }
     ],
-    "VH002": [],
+    "VH002": [
+        {
+            "timestamp": "2025-12-16T11:03:25.463867",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "B1765883005",
+            "likely_failure": "Overstrain Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "testing last"
+            }
+        },
+        {
+            "timestamp": "2025-12-16T18:25:25.057599",
+            "status": "Completed",
+            "slot": "10:00 AM",
+            "booking_id": "B1765909525",
+            "likely_failure": "Tool Wear/Vibration Failure",
+            "risk_score": 0.631,
+            "priority": "MEDIUM",
+            "customer_feedback": {
+                "rating": 4,
+                "comments": "nice"
+            }
+        }
+    ],
     "VH003": [
         {
             "timestamp": "2025-12-10T04:42:46.773527",
@@ -219,7 +279,21 @@
             }
         }
     ],
-    "VH004": [],
+    "VH004": [
+        {
+            "timestamp": "2025-12-16T14:23:54.243453",
+            "status": "Completed",
+            "slot": "02:00 PM",
+            "booking_id": "B1765895034",
+            "likely_failure": "Tool Wear/Vibration Failure",
+            "risk_score": 0.996,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 5,
+                "comments": "success"
+            }
+        }
+    ],
     "VH005": [
         {
             "timestamp": "2025-12-07T06:57:33.090065",
@@ -456,7 +530,28 @@
             }
         }
     ],
-    "VH006": [],
+    "VH006": [
+        {
+            "timestamp": "2025-12-16T11:16:04.668462",
+            "status": "Completed",
+            "slot": "12:00 PM",
+            "booking_id": "B1765883764",
+            "likely_failure": "Power/Battery Failure",
+            "risk_score": 1.0,
+            "priority": "HIGH",
+            "customer_feedback": {
+                "rating": 3,
+                "comments": "nice "
+            }
+        },
+        {
+            "timestamp": "2025-12-16T14:29:24.259966",
+            "status": "declined",
+            "rejected_slot": "10:00 AM",
+            "likely_failure": "Heat Dissipation Failure",
+            "risk_score": 0.0
+        }
+    ],
     "VH007": [],
     "VH008": [
         {

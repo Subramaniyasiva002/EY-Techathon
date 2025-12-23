@@ -21,7 +21,12 @@ def local_css(file_name):
 try:
     local_css("assets/custom.css")
 except:
-    pass
+    # Use default/inline styles if file missing
+    st.markdown("""<style>
+        .customer-card { background-color: #1e1e1e; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .kpi-label { color: #aaa; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .status-pill { padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; }
+    </style>""", unsafe_allow_html=True)
 
 nm = NotificationsManager()
 fb = FeedbackAgent()
@@ -36,7 +41,7 @@ def reload_feedback_db():
 # --- SIDEBAR NAVIGATION (Mobile Friendly) ---
 st.sidebar.markdown("""
     <div class="sidebar-logo">
-        <span class="sidebar-logo-icon">🚗</span>
+        <span class="sidebar-logo-icon"></span>
         <span class="sidebar-logo-text">My AutoHub</span>
     </div>
 """, unsafe_allow_html=True)
@@ -113,6 +118,49 @@ if selection == "Overview":
     with col2:
         # Alerts Section
         if notification:
+            # ============================================================
+            # REAL-TIME SLOT AVAILABILITY CHECK
+            # ============================================================
+            # Check if recommended slot is still available and update if needed
+            if notification.get("status") == "pending" and notification.get("recommended_slot"):
+                recommended_slot = notification.get("recommended_slot")
+                
+                # Check current slot availability
+                from slots_manager import SlotsManager
+                sm = SlotsManager()
+                available_slots = sm.get_slots()
+                
+                if recommended_slot not in available_slots:
+                    # Slot was taken by another vehicle - get new recommendation
+                    from scheduling_agent import SchedulingAgent
+                    sched = SchedulingAgent()
+                    new_rec = sched.recommend_slot(vehicle_id, risk_score)
+                    
+                    if new_rec.get("recommended_slot"):
+                        # Store old slot for message
+                        old_slot = recommended_slot
+                        
+                        # Update notification with new slot
+                        notification["recommended_slot"] = new_rec["recommended_slot"]
+                        nm.add_notification(
+                            vehicle_id,
+                            notification["message"],
+                            notification["likely_failure"],
+                            new_rec["recommended_slot"],
+                            notification["risk_score"],
+                            notification["priority"],
+                            features=notification.get("features")
+                        )
+                        
+                        # Show slot update message
+                        st.info(f"🔄 Slot Update: **{old_slot}** was just booked by another vehicle → New slot: **{new_rec['recommended_slot']}**")
+                    else:
+                        # No available slots
+                        st.warning("⚠️ All service slots are currently full. Please try again later.")
+            
+            # ---------------------------------------------------------
+            # STATE 1: PENDING (User needs to approve)
+            # ---------------------------------------------------------
             status = notification.get("status", "pending")
             
             if status == "pending":
@@ -135,7 +183,7 @@ if selection == "Overview":
                 # Action Buttons
                 c1, c2 = st.columns(2)
                 with c1:
-                    if st.button(f"📅 Book {notification['recommended_slot']}", type="primary", use_container_width=True):
+                    if st.button(f"✅ Yes, Book {notification['recommended_slot']}", type="primary", use_container_width=True):
                          # Call Booking API
                         payload = {
                             "vehicle_id": vehicle_id,
@@ -146,34 +194,50 @@ if selection == "Overview":
                             # Mock API call if server not running or just run it
                             r = requests.post(f"{BOOKING_API_URL}/book", json=payload)
                             
-                            # SAVE RECORD (Logic preserved)
-                            features = notification.get("features")
-                            booking_info = {"slot": notification["recommended_slot"], "booking_id": f"B{int(time.time())}"}
-                            diag_info = {
-                                "likely_failure": notification["likely_failure"],
-                                "risk_score": notification.get("risk_score", 0),
-                                "priority": notification.get("priority", "HIGH")
-                            }
-                            if features:
-                                from sample_store import SampleStore
-                                ss = SampleStore()
-                                diag_f = diag_info.copy()
-                                diag_f["predicted_class"] = 1 
-                                ss.save_sample(features, diag_f)
-                                
-                            fb.record_service(vehicle_id, booking_info, diag_info)
-                            nm.update_notification_status(vehicle_id, "booked")
-                            st.success("Booking Confirmed!")
-                            time.sleep(1)
-                            st.rerun()
+                            # SAVE RECORD (Logic preserved from old code)
+                            if r.status_code == 200 or r.status_code == 201: # Check for success
+                                features = notification.get("features")
+                                booking_info = {"slot": notification["recommended_slot"], "booking_id": f"B{int(time.time())}"}
+                                diag_info = {
+                                    "likely_failure": notification["likely_failure"],
+                                    "risk_score": notification.get("risk_score", 0),
+                                    "priority": notification.get("priority", "HIGH")
+                                }
+                                if features:
+                                    from sample_store import SampleStore
+                                    ss = SampleStore()
+                                    diag_f = diag_info.copy()
+                                    diag_f["predicted_class"] = 1 
+                                    ss.save_sample(features, diag_f)
+                                    
+                                fb.record_service(vehicle_id, booking_info, diag_info)
+                                nm.update_notification_status(vehicle_id, "booked")
+                                st.success("Booking Confirmed!")
+                                time.sleep(1)
+                                st.rerun()
+                            else:
+                                st.error(f"Booking Failed: {r.text}")
+
                         except Exception as e:
                             st.error(f"Connection Error: {e}")
+                            st.warning("Ensure booking_api.py is running on port 9000")
                             
                 with c2:
-                    if st.button("Dismiss Alert", use_container_width=True):
+                    if st.button("❌ No, Decline", use_container_width=True):
+                         # Logic from old code
+                        fb.record_rejection(
+                            vehicle_id, 
+                            {"likely_failure": notification["likely_failure"], "risk_score": 0.0}, 
+                            notification["recommended_slot"]
+                        )
+                        st.info("Booking Declined.")
                         nm.clear_notification(vehicle_id)
+                        time.sleep(2)
                         st.rerun()
 
+            # ---------------------------------------------------------
+            # STATE 2: BOOKED (Waiting for Service)
+            # ---------------------------------------------------------
             elif status == "booked":
                 st.markdown("""
                 <div class="customer-card">
@@ -181,7 +245,7 @@ if selection == "Overview":
                     <div style="display:flex; align-items:center; gap:15px; margin-top:10px;">
                         <div style="font-size:40px;">📅</div>
                         <div>
-                            <div style="font-weight:700; color:white; font-size:18px;">Tomorrow, 10:00 AM</div>
+                            <div style="font-weight:700; color:white; font-size:18px;">Tomorrow arrives..</div>
                             <div style="color:#9CA3AF;">Service Center A • Bay 3</div>
                         </div>
                     </div>
@@ -190,8 +254,25 @@ if selection == "Overview":
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
+                
+                # Check Completion Status (Logic from old code)
+                reload_feedback_db()
+                history = fb.db.get(vehicle_id, [])
+                is_completed = False
+                if history:
+                     if history[-1].get("status") == "Completed":
+                         is_completed = True
+                
+                if is_completed:
+                    st.success("✅ Service Completed! Please provide feedback below.")
+                    nm.clear_notification(vehicle_id) # Clear cycle
+                    time.sleep(1)
+                    st.rerun()
+                else:
+                    if st.button("Check Status"):
+                        st.rerun()
             
-            # Check for completed services without feedback
+            # Check for completed services without feedback (Existing Theme Logic to show feedback form)
             reload_feedback_db()  # Reload to get latest data
             hist = fb.db.get(vehicle_id, [])
             completed_without_feedback = [h for h in hist if h.get("status") == "Completed" and not h.get("customer_feedback")]

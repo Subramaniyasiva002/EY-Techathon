@@ -148,24 +148,25 @@ if selection == "Tech Dashboard":
     
     with header_col2:
         st.markdown(f"<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
-        # Always show button, but disable if < 50
-        button_disabled = labeled_count < 50
-        if st.button("🚀 Refine Model", key="refine_model_header", 
-                    use_container_width=True, disabled=button_disabled):
-            with st.spinner(f"Refining LightGBM model with {labeled_count} labeled samples... This may take a few minutes."):
-                try:
-                    result = subprocess.run(["python", "refinement_train_new_model.py"], 
-                                          capture_output=True, text=True, timeout=300)
-                    if result.returncode == 0:
-                        st.success("✅ Model Updated Successfully!")
-                        st.info("The refined model has been saved to models/ai4i_lgbm_refined.joblib")
-                        st.rerun()
-                    else:
-                        st.error(f"Model refinement failed: {result.stderr}")
-                except subprocess.TimeoutExpired:
-                    st.error("Model refinement timed out. Please try again.")
-                except Exception as e:
-                    st.error(f"Error during model refinement: {str(e)}")
+        st.markdown(f"<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
+        # Refinement logic removed as requested
+        pass
+
+        # Display results from session state
+        if 'refinement_result' in st.session_state:
+            res = st.session_state['refinement_result']
+            
+            if res.get('success'):
+                st.success("✅ Model Updated Successfully!")
+                st.info(f"Refined model saved. Accuracy: {res.get('accuracy', 0):.1%}")
+                
+                with st.expander("📋 View Report"):
+                    st.text(res.get('report', 'No report available'))
+                
+                # Clear result after showing (optional, or keep until next click)
+            else:
+                st.error("❌ Refinement Failed")
+                st.error(res.get('message'))
         
         # Show progress counter below button
         status_text = "✅ Ready for refinement" if labeled_count >= 50 else f"({50-labeled_count} more needed)"
@@ -327,43 +328,8 @@ if selection == "Tech Dashboard":
                     </div>
                 """, unsafe_allow_html=True)
                 
-                # Complete button for each vehicle
-                if st.button("✅ Complete", key=complete_key, use_container_width=True):
-                    # Get predicted failure from feedback agent
-                    hist = fb.db.get(vehicle_id, [])
-                    predicted_failure = "Unknown"
-                    if hist:
-                        predicted_failure = hist[-1].get("likely_failure", "Unknown")
-                    
-                    # Show form for true label input
-                    with st.form(key=f"complete_form_{vehicle_id}"):
-                        true_label = st.selectbox(
-                            "Actual Failure Found (True Label)",
-                            [predicted_failure, "No Failure", "Heat Dissipation Failure", 
-                             "Power/Battery Failure", "Tool Wear/Vibration Failure", "Overstrain Failure"],
-                            key=f"true_label_{vehicle_id}"
-                        )
-                        notes = st.text_area("Technician Notes", key=f"notes_{vehicle_id}", 
-                                            placeholder="Describe the repair details...")
-                        
-                        submitted = st.form_submit_button("✅ Confirm & Complete", type="primary")
-                        
-                        if submitted:
-                            try:
-                                # Update true label
-                                fb.update_true_label(vehicle_id, true_label)
-                                
-                                # Release slot via API
-                                r = requests.post(f"{BOOKING_API_URL}/complete", params={"slot": slot})
-                                if r.status_code == 200:
-                                    fb.mark_service_completed(vehicle_id)
-                                    st.success(f"✅ Service for {vehicle_id} completed successfully!")
-                                    time.sleep(1)
-                                    st.rerun()
-                                else:
-                                    st.error("API Error: Could not release slot")
-                            except Exception as e:
-                                st.error(f"Error: {e}")
+                # View-only - direct technicians to Technician Input page
+                st.caption("→ Go to 'Technician Input' to complete this service")
         else:
             st.markdown("""
                 <div style="text-align: center; padding: 40px; color: #9CA3AF;">
@@ -374,66 +340,107 @@ if selection == "Tech Dashboard":
         st.markdown("</div>", unsafe_allow_html=True)
 
 
-# 2. TECHNICIAN INPUT (Separate Section)
+# 2. TECHNICIAN INPUT (Primary Service Completion Page)
 elif selection == "Technician Input":
-    st.title("📝 Technician Input - True Label Collection")
-    st.caption("Input actual failure labels for model improvement")
+    st.title("📝 Technician Service Completion")
+    st.caption("Complete services and confirm actual failure types")
     
     # Get active slots for technician input
     slots_data = sm._load_db()
     active_slots_for_input = [s for s, v in slots_data.items() if v is not None]
     
     if active_slots_for_input:
-        selected_slot = st.selectbox("Select Vehicle to Label", active_slots_for_input, key="tech_input_slot")
+        selected_slot = st.selectbox("Select Service Bay to Complete", active_slots_for_input, key="tech_input_slot")
         selected_vehicle = slots_data[selected_slot]
         
-        # Get predicted failure
+        # Get predicted failure and risk
         predicted_failure = "Unknown"
+        risk_score = 0.0
         hist = fb.db.get(selected_vehicle, [])
         if hist:
             predicted_failure = hist[-1].get("likely_failure", "Unknown")
+            risk_score = hist[-1].get("risk_score", 0.0)
         
-        col_input1, col_input2 = st.columns([1, 1])
+        # Display vehicle info
+        col_info, col_form = st.columns([1, 1.2])
         
-        with col_input1:
-            st.markdown(f"""
-                <div style="background:rgba(17, 24, 39, 0.6); backdrop-filter:blur(10px); 
-                           border:1px solid rgba(34, 211, 238, 0.1); padding:20px; border-radius:12px;">
-                    <h4 style="color:#E5E7EB; margin-top:0;">Vehicle: {selected_vehicle}</h4>
-                    <p style="color:#9CA3AF;">Slot: {selected_slot}</p>
-                    <div style="margin-top:10px;">
-                        <span style="background:rgba(34, 211, 238, 0.2); color:#22D3EE; 
-                                     padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">
-                            Predicted: {predicted_failure}
-                        </span>
-                    </div>
+        with col_info:
+            risk_pct = int(risk_score * 100)
+            risk_color = "#EF4444" if risk_pct > 80 else "#FACC15" if risk_pct > 50 else "#22D3EE"
+            
+            st.subheader("Service Information")
+            
+            st.metric("Vehicle ID", selected_vehicle)
+            st.metric("Service Bay", selected_slot)
+            
+            st.markdown("### AI Prediction")
+            st.info(f"**{predicted_failure}**")
+            
+            st.markdown("### Risk Level")
+            st.progress(risk_pct / 100)
+            st.caption(f"Risk: {risk_pct}%")
+        
+        with col_form:
+            st.markdown("""
+                <div style="background:rgba(34, 197, 94, 0.1); border:1px solid rgba(34, 197, 94, 0.3); 
+                           padding:15px; border-radius:8px; margin-bottom:20px;">
+                    <h4 style="color:#22C55E; margin:0; font-size:14px;">✅ Confirm Diagnosis & Complete Service</h4>
                 </div>
             """, unsafe_allow_html=True)
-        
-        with col_input2:
-            with st.form(key=f"tech_input_form_{selected_vehicle}"):
+            
+            with st.form(key=f"tech_complete_form_{selected_vehicle}", clear_on_submit=False):
                 true_label_input = st.selectbox(
-                    "Actual Failure (True Label)",
+                    "Actual Failure Found",
                     [predicted_failure, "No Failure", "Heat Dissipation Failure", 
                      "Power/Battery Failure", "Tool Wear/Vibration Failure", "Overstrain Failure"],
-                    key=f"tech_true_label_{selected_vehicle}"
+                    key=f"tech_true_label_{selected_vehicle}",
+                    help="Select the actual failure type found during service"
                 )
-                tech_notes = st.text_area("Technician Notes", key=f"tech_notes_{selected_vehicle}",
-                                         placeholder="Add repair details...")
                 
-                submit_label = st.form_submit_button("💾 Save True Label", type="primary")
+                col_btn1, col_btn2 = st.columns(2)
+                with col_btn1:
+                    submit_complete = st.form_submit_button(
+                        "✅ Complete Service", 
+                        type="primary",
+                        use_container_width=True
+                    )
+                with col_btn2:
+                    cancel = st.form_submit_button(
+                        "Cancel",
+                        use_container_width=True
+                    )
                 
-                if submit_label:
+                if submit_complete:
                     try:
-                        # Update true label in feedback agent
+                        # 1. Update true label in CSV
                         fb.update_true_label(selected_vehicle, true_label_input)
-                        st.success(f"✅ True label saved for {selected_vehicle}: {true_label_input}")
-                        time.sleep(0.5)
-                        st.rerun()
+                        
+                        # 2. Release slot via API
+                        r = requests.post(f"{BOOKING_API_URL}/complete", params={"slot": selected_slot})
+                        
+                        if r.status_code == 200:
+                            # 3. Mark service as completed in maintenance history
+                            fb.mark_service_completed(selected_vehicle)
+                            
+                            st.success(f"✅ Service completed successfully!")
+                            st.info(f"📋 True label recorded: **{true_label_input}**")
+                            st.info(f"🔓 Bay **{selected_slot}** has been freed")
+                            
+                            time.sleep(2)
+                            st.rerun()
+                        else:
+                            st.error("❌ API Error: Could not release service bay")
+                            st.error(f"Status Code: {r.status_code}")
                     except Exception as e:
-                        st.error(f"Error saving label: {e}")
+                        st.error(f"❌ Error completing service: {e}")
     else:
-        st.info("No active vehicles to label. Complete services will appear here for labeling.")
+        st.info("📭 No vehicles currently in service. Active bookings will appear here.")
+        st.markdown("""
+            <div style="background:rgba(17, 24, 39, 0.6); padding:30px; border-radius:12px; text-align:center; margin-top:30px;">
+                <div style="font-size:48px; margin-bottom:15px;">🔧</div>
+                <div style="color:#9CA3AF; font-size:16px;">Waiting for service assignments...</div>
+            </div>
+        """, unsafe_allow_html=True)
 
 
 # 3. DIAGNOSTICS
@@ -494,58 +501,60 @@ elif selection == "Admin & Security":
     col1, col2 = st.columns([1.5, 1])
     
     with col1:
-        # Active Services moved here
-        st.subheader("Active Services Management")
+        # Active Services Overview (View Only)
+        st.subheader("Active Services Overview")
         slots_data = sm._load_db()
         active_slots = [s for s, v in slots_data.items() if v is not None]
 
         if active_slots:
-             col_sel, col_act = st.columns(2)
-             
-             with col_sel:
-                 target_slot = st.selectbox("Select Active Bay", active_slots)
-                 vehicle_id = slots_data[target_slot]
-                 
-                 # Fetch history
-                 predicted_failure = "Unknown"
-                 hist = fb.db.get(vehicle_id, [])
-                 if hist:
-                     predicted_failure = hist[-1].get("likely_failure", "Unknown")
-                     
-                 st.markdown(f"""
-                 <div style="background:rgba(17, 24, 39, 0.6); backdrop-filter:blur(10px); border:1px solid rgba(34, 211, 238, 0.1); padding:20px; border-radius:12px;">
-                    <h3 style="color:#E5E7EB; margin-top:0;">{vehicle_id}</h3>
-                    <p style="color:#9CA3AF;">Bay: {target_slot}</p>
-                    <div style="margin-top:10px;">
-                        <span style="background:rgba(250, 204, 21, 0.2); color:#FACC15; padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">Predicted: {predicted_failure}</span>
+            st.markdown("""
+                <div style="background:rgba(59, 130, 246, 0.1); border:1px solid rgba(59, 130, 246, 0.3); 
+                           padding:12px; border-radius:8px; margin-bottom:15px;">
+                    <div style="color:#60A5FA; font-size:13px; font-weight:600;">ℹ️ View Only - Use 'Technician Input' to complete services</div>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            for slot in active_slots:
+                vehicle_id = slots_data[slot]
+                
+                # Fetch history
+                predicted_failure = "Unknown"
+                risk_score = 0.0
+                hist = fb.db.get(vehicle_id, [])
+                if hist:
+                    predicted_failure = hist[-1].get("likely_failure", "Unknown")
+                    risk_score = hist[-1].get("risk_score", 0.0)
+                
+                risk_pct = int(risk_score * 100)
+                risk_color = "#EF4444" if risk_pct > 80 else "#FACC15" if risk_pct > 50 else "#22D3EE"
+                    
+                st.markdown(f"""
+                <div style="background:rgba(17, 24, 39, 0.6); backdrop-filter:blur(10px); 
+                           border:1px solid rgba(34, 211, 238, 0.1); padding:16px; border-radius:12px; margin-bottom:12px;">
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <div>
+                            <h4 style="color:#E5E7EB; margin:0 0 5px 0;">{vehicle_id}</h4>
+                            <div style="color:#9CA3AF; font-size:13px;">Bay: {slot}</div>
+                        </div>
+                        <div style="background:rgba(59, 130, 246, 0.2); color:#60A5FA; 
+                                   padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">
+                            IN SERVICE
+                        </div>
                     </div>
-                 </div>
-                 """, unsafe_allow_html=True)
-                 
-             with col_act:
-                 with st.form("completion_form"):
-                     true_label = st.selectbox("Confirm True Failure", 
-                                               [predicted_failure, "No Failure", "Heat Dissipation Failure", "Power/Battery Failure", "Tool Wear/Vibration Failure", "Overstrain Failure"])
-                     notes = st.text_area("Technician Notes")
-                     
-                     submitted = st.form_submit_button("✅ Mark Complete", type="primary")
-                     
-                     if submitted:
-                         try:
-                            # Use internal logic directly if API is flaky or for consistency
-                            fb.update_true_label(vehicle_id, true_label)
-                            
-                            # Release slot via API or manager
-                            r = requests.post(f"{BOOKING_API_URL}/complete", params={"slot": target_slot})
-                            if r.status_code == 200:
-                                fb.mark_service_completed(vehicle_id)
-                                st.success("Completed!")
-                                time.sleep(1)
-                                st.rerun()
-                            else:
-                                st.error("API Error")
-                         except Exception as e:
-                             st.error(f"Error: {e}")
+                    <div style="margin-top:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.1);">
+                        <div style="color:#9CA3AF; font-size:11px; margin-bottom:5px;">Predicted Issue</div>
+                        <div style="color:#FACC15; font-weight:600; font-size:13px;">{predicted_failure}</div>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <div style="flex:1; height:6px; background:rgba(255,255,255,0.1); border-radius:3px;">
+                                <div style="height:100%; width:{risk_pct}%; background:{risk_color}; border-radius:3px;"></div>
+                            </div>
+                            <span style="color:{risk_color}; font-weight:600; font-size:12px;">{risk_pct}%</span>
+                        </div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
         else:
             st.info("No vehicles currently in service bays.")
     

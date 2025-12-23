@@ -86,34 +86,20 @@ class FeedbackAgent:
             json.dump(self.db, f, indent=4)
 
     def collect_feedback(self, vehicle_id, rating, comments):
-        """Append customer feedback to last completed service"""
-        if not self.db.get(vehicle_id):
+        """Append customer feedback to last service"""
+        if not self.db[vehicle_id]:
             return None
 
-        # Find the last completed service without feedback
-        services = self.db[vehicle_id]
-        for service in reversed(services):
-            if service.get("status") == "Completed" and not service.get("customer_feedback"):
-                service["customer_feedback"] = {
-                    "rating": rating,
-                    "comments": comments
-                }
-                # Save file
-                with open(self.db_path, "w") as f:
-                    json.dump(self.db, f, indent=4)
-                return service
-        
-        # Fallback: if no completed service found, append to last service
-        if services:
-            services[-1]["customer_feedback"] = {
-                "rating": rating,
-                "comments": comments
-            }
-            with open(self.db_path, "w") as f:
-                json.dump(self.db, f, indent=4)
-            return services[-1]
-        
-        return None
+        self.db[vehicle_id][-1]["customer_feedback"] = {
+            "rating": rating,
+            "comments": comments
+        }
+
+        # Save file
+        with open(self.db_path, "w") as f:
+            json.dump(self.db, f, indent=4)
+
+        return self.db[vehicle_id][-1]
     def update_true_label(self, vehicle_id, actual_label):
         rows = []
         with open("live_feature_samples.csv", "r") as f:
@@ -130,4 +116,3 @@ class FeedbackAgent:
         with open("live_feature_samples.csv", "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerows(rows)
-

@@ -7,7 +7,7 @@ import time
 from collections import deque
 import numpy as np
 from ueba_agent import UEBAAgent
-POLL_INTERVAL = 5          # seconds
+POLL_INTERVAL = 3          # seconds
 WINDOW_SIZE = 10            # number of readings in rolling context window
 TELEMATICS_URL = "http://localhost:8000/telematics/{}"
 
