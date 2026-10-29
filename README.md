@@ -351,13 +351,4 @@ The model continuously improves via an **outer feedback loop** — real service 
 
 ---
 
-## 📄 License
 
-This project was built for the **EY Techathon** competition. All rights reserved.
-
----
-
-<div align="center">
-  <b>Built with ❤️ for EY Techathon</b><br/>
-  <i>Predictive Intelligence · Autonomous Agents · Secure by Design</i>
-</div>
